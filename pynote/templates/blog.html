@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block title %}Blog{% endblock %} {% block content
+%}
+<h1 align="center">Блог</h1>
+<ul class="list-group list-group-flush" id="notes">
+  {% for note in user.notes %}
+  <li class="list-group-item">
+    {{ note.data }}
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
